@@ -1,6 +1,6 @@
 import {Command} from 'vuerd-core';
 
-export declare function install(command: typeof Command): void;
+export declare function install(command: Command): void;
 declare const _default: {
   install: typeof install;
 };
