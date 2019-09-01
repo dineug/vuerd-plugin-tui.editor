@@ -1,9 +1,11 @@
 <template>
-  <Editor
-          :value="value"
-          :height="'100%'"
-          @input="onInput"
-  />
+  <div class="vuerd-plugin-tui-editor">
+    <Editor
+            :value="value"
+            :height="'100%'"
+            @input="onInput"
+    />
+  </div>
 </template>
 
 <script lang="ts">
@@ -29,5 +31,9 @@
 </script>
 
 <style scoped lang="scss">
-
+  .vuerd-plugin-tui-editor {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
 </style>
