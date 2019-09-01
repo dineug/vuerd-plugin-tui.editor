@@ -7955,10 +7955,10 @@ vue@^2.6.10:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
 
-vuerd-core@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/vuerd-core/-/vuerd-core-0.1.7.tgz#f30b3af652738f4198a341b75bf0c3a979b81095"
-  integrity sha512-NKQ3zaj+pC1fcbmdQ/zJbAXgfpmIYhc/7GsOdin9AQwBgadzgFEcWyzTT+f6+6Y4OOgE/bt5GNeyQcfMSsJjMA==
+vuerd-core@^0.1.12:
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/vuerd-core/-/vuerd-core-0.1.12.tgz#c36845bcaff5fd5453aeae6f1f38093d72ce5d5c"
+  integrity sha512-VXaGfmxsw1Cr54Ts5UViDeCVVPjISVo7dN25BUWuUpTO17GXkoJzV+OkfizZ3Ya/FdTlxDwjV1B1CJgf5JkaiQ==
   dependencies:
     core-js "^2.6.5"
     rxjs "^6.5.2"
