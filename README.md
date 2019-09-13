@@ -1,8 +1,9 @@
 # vuerd-plugin-tui.editor
 [vuerd-core](https://github.com/vuerd/vuerd-core) plugin [tui.editor](https://github.com/nhn/tui.editor)
 
-## Storybook 
-[Live Demo](https://vuerd.github.io/vuerd-docs/)
+## Document
+[Storybook](https://vuerd.github.io/vuerd-docs/)   
+[Live Demo](https://vuerd.github.io/vuerd-docs/iframe.html?id=demo-live--vuerd-core)
 
 ## Install
 ```bash
