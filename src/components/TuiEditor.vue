@@ -2,7 +2,7 @@
   <div class="vuerd-plugin-tui-editor">
     <Editor
             :value="value"
-            :height="'100%'"
+            height="100%"
             @input="onInput"
     />
   </div>
@@ -13,7 +13,7 @@
   import 'tui-editor/dist/tui-editor-contents.css';
   import 'codemirror/lib/codemirror.css';
   import {Editor} from '@toast-ui/vue-editor';
-  import {Component, Vue} from 'vue-property-decorator';
+  import {Component, Prop, Vue} from 'vue-property-decorator';
 
   @Component({
     components: {
@@ -21,7 +21,8 @@
     },
   })
   export default class TuiEditor extends Vue {
-    private value: string = '';
+    @Prop({type: String, default: ''})
+    private value!: string;
 
     private onInput(value: string) {
       this.$emit('input', value);
