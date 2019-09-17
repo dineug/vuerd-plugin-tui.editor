@@ -4,6 +4,7 @@
             :value="value"
             height="100%"
             @input="onInput"
+            ref="tuiEditor"
     />
   </div>
 </template>
@@ -13,7 +14,7 @@
   import 'tui-editor/dist/tui-editor-contents.css';
   import 'codemirror/lib/codemirror.css';
   import {Editor} from '@toast-ui/vue-editor';
-  import {Component, Prop, Vue} from 'vue-property-decorator';
+  import {Component, Prop, Watch, Vue} from 'vue-property-decorator';
 
   @Component({
     components: {
@@ -23,6 +24,18 @@
   export default class TuiEditor extends Vue {
     @Prop({type: String, default: ''})
     private value!: string;
+    @Prop({type: Boolean, default: false})
+    private focus!: boolean;
+
+    @Watch('focus')
+    private watchFocus(focus: boolean) {
+      const editor = this.$refs.tuiEditor as any;
+      if (focus) {
+        editor.invoke('focus');
+      } else {
+        editor.invoke('blur');
+      }
+    }
 
     private onInput(value: string) {
       this.$emit('input', value);

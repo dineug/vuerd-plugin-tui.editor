@@ -7,7 +7,7 @@ import TuiEditor from '@/components';
 Vue.config.productionTip = false;
 
 VuerdCore.use(TuiEditor);
-Vue.use(VuerdCore);
+Vue.use(VuerdCore, {logLevel: 'debug'});
 
 new Vue({
   render: (h) => h(App),
