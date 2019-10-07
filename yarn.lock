@@ -771,6 +771,11 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/jasmine@^3.3.8":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.4.0.tgz#018c56db42400c092aae47de21f710b7f04e4b06"
+  integrity sha512-6pUnBg6DuSB55xnxJ5+gW9JOkFrPsXkYAuqqEE8oyrpgDiPQ+TZ+1Zt4S+CHcRJcxyNYXeIXG4vHSzdF6y9Uvw==
+
 "@types/jquery@^3.3.29":
   version "3.3.31"
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.3.31.tgz#27c706e4bf488474e1cb54a71d8303f37c93451b"
@@ -7695,6 +7700,11 @@ uglify-js@3.4.x:
     commander "~2.19.0"
     source-map "~0.6.1"
 
+undo-manager@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/undo-manager/-/undo-manager-1.0.5.tgz#c348cf5bbd745d0d5163bf733d95f20ec0caa71c"
+  integrity sha1-w0jPW710XQ1RY79zPZXyDsDKpxw=
+
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-1.0.4.tgz#2619800c4c825800efdd8343af7dd9933cbe2818"
@@ -7864,7 +7874,7 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-uuid@^3.0.1, uuid@^3.3.2:
+uuid@^3.0.1, uuid@^3.3.2, uuid@^3.3.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz#4568f0216e78760ee1dbf3a4d2cf53e224112866"
   integrity sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ==
@@ -7900,6 +7910,13 @@ vm-browserify@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha512-iq+S7vZJE60yejDYM0ek6zg308+UZsdtPExWP9VZoCFCz1zkJoXFnAX7aZfd/ZwrkidzdUZL0C/ryW+JwAiIGw==
+
+vscode-icons-js@^9.3.0:
+  version "9.3.0"
+  resolved "https://registry.yarnpkg.com/vscode-icons-js/-/vscode-icons-js-9.3.0.tgz#7f07d5bb6fdf611e2a9a30796f5cc3ffed919c76"
+  integrity sha512-yUGnl/ikSIGgoI3LJef4Q86LZOpoQn2a1Jc67GPKP1k2GK/v93xY9yI0vF1sBImPuRf/KfiWal/a7xhQ0pR94Q==
+  dependencies:
+    "@types/jasmine" "^3.3.8"
 
 vue-class-component@^7.0.1, vue-class-component@^7.0.2:
   version "7.1.0"
@@ -7955,21 +7972,23 @@ vue@^2.6.10:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
 
-vuerd-core@^0.2.8:
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/vuerd-core/-/vuerd-core-0.2.8.tgz#261cff4d022d01b28483cf9db1b5f4a060686040"
-  integrity sha512-J2izYxWFYMNIR3xyk/dzkHGmpLCTCqovWBygEu7W2/09N7rdLJHucV4Pwke2d+Yjc+KQTdIqAApc6uJCMLcOCA==
+vuerd-core@^0.2.18:
+  version "0.2.18"
+  resolved "https://registry.yarnpkg.com/vuerd-core/-/vuerd-core-0.2.18.tgz#ac7ce145f395bc1834e2f6589287ca780684040c"
+  integrity sha512-AzdNyAoaq2fvMDQ+McpMXw3MOGeNgUH815ZFqLqGL/5Vy7yhQmnA+bF7A7S4Hz9c3u788wQiD86wAlEI6D0LMw==
   dependencies:
     "@tweenjs/tween.js" "^18.1.2"
     core-js "^2.6.5"
     rxjs "^6.5.2"
-    uuid "^3.3.2"
+    undo-manager "^1.0.5"
+    uuid "^3.3.3"
+    vscode-icons-js "^9.3.0"
     vue "^2.6.10"
     vue-class-component "^7.0.2"
     vue-property-decorator "^8.1.0"
-    vuex "^3.0.1"
+    vuex "^3.1.1"
 
-vuex@^3.0.1:
+vuex@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.1.1.tgz#0c264bfe30cdbccf96ab9db3177d211828a5910e"
   integrity sha512-ER5moSbLZuNSMBFnEBVGhQ1uCBNJslH9W/Dw2W7GZN23UQA69uapP5GTT9Vm8Trc0PzBSVt6LzF3hGjmv41xcg==

@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "@toast-ui/vue-editor": "^1.1.1",
-    "vuerd-core": "^0.2.8"
+    "vuerd-core": "^0.2.18"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
@@ -31,15 +31,6 @@
     "vue-property-decorator": "^8.1.0",
     "vue-template-compiler": "^2.6.10"
   },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
   "files": [
     "dist/*",
     "src/*"
