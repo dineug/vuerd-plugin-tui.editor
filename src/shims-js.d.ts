@@ -1,1 +1,1 @@
-declare module '@toast-ui/vue-editor';
+declare module "@toast-ui/vue-editor";
