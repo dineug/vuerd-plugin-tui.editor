@@ -27,3 +27,6 @@ Vue.use(VuerdCore);
 ```html
 <VuerdCore/>
 ```
+
+## License
+[MIT](https://github.com/vuerd/vuerd-plugin-tui.editor/blob/master/LICENSE)
