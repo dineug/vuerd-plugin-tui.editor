@@ -17,7 +17,7 @@ import "tui-editor/dist/tui-editor-contents.css";
 import "codemirror/lib/codemirror.css";
 import "tui-editor/dist/tui-editor-extChart";
 import "tui-editor/dist/tui-editor-extUML";
-import "tui-editor/dist/tui-editor-extColorSyntax";
+import "tui-editor/dist/tui-editor-extTable";
 import "tui-editor/dist/tui-editor-extScrollSync";
 import { Editor } from "@toast-ui/vue-editor";
 import { Component, Prop, Watch, Vue } from "vue-property-decorator";
@@ -39,7 +39,7 @@ export default class TuiEditor extends Vue {
   private focus!: boolean;
 
   private editorOption: EditorOption = {
-    exts: ["chart", "uml", "colorSyntax", "scrollSync"],
+    exts: ["chart", "uml", "table", "scrollSync"],
     hooks: {}
   };
 
