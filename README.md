@@ -21,7 +21,18 @@ import VuerdCore from 'vuerd-core';
 import TuiEditor from 'vuerd-plugin-tui.editor';
 import 'vuerd-core/dist/vuerd-core.css';
 import 'vuerd-plugin-tui.editor/dist/vuerd-plugin-tui.editor.css';
+
 VuerdCore.use(TuiEditor);
+// Option
+/*
+VuerdCore.use(TuiEditor, {
+  imageUpload(blob, callback) {
+    // upload
+    callback("URL");
+  }
+});
+*/
+
 Vue.use(VuerdCore);
 ```
 ```html

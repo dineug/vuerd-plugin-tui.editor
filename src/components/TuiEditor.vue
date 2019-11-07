@@ -1,6 +1,13 @@
 <template>
   <div class="vuerd-plugin-tui-editor">
-    <Editor :value="value" height="100%" @input="onInput" ref="tuiEditor" />
+    <Editor
+      :value="value"
+      height="100%"
+      previewStyle="vertical"
+      :options="editorOption"
+      ref="tuiEditor"
+      @input="onInput"
+    />
   </div>
 </template>
 
@@ -8,8 +15,17 @@
 import "tui-editor/dist/tui-editor.css";
 import "tui-editor/dist/tui-editor-contents.css";
 import "codemirror/lib/codemirror.css";
+import "tui-editor/dist/tui-editor-extChart";
+import "tui-editor/dist/tui-editor-extUML";
+import "tui-editor/dist/tui-editor-extColorSyntax";
+import "tui-editor/dist/tui-editor-extScrollSync";
 import { Editor } from "@toast-ui/vue-editor";
 import { Component, Prop, Watch, Vue } from "vue-property-decorator";
+
+interface EditorOption {
+  exts: string[];
+  hooks: any;
+}
 
 @Component({
   components: {
@@ -21,6 +37,13 @@ export default class TuiEditor extends Vue {
   private value!: string;
   @Prop({ type: Boolean, default: false })
   private focus!: boolean;
+
+  private editorOption: EditorOption = {
+    exts: ["chart", "uml", "colorSyntax", "scrollSync"],
+    hooks: {}
+  };
+
+  public imageUpload?: ((blob: Blob, callback: (url: string) => void) => void);
 
   @Watch("focus")
   private watchFocus(focus: boolean) {
@@ -34,6 +57,12 @@ export default class TuiEditor extends Vue {
 
   private onInput(value: string) {
     this.$emit("input", value);
+  }
+
+  private created() {
+    if (this.imageUpload && typeof this.imageUpload === "function") {
+      this.editorOption.hooks.addImageBlobHook = this.imageUpload;
+    }
   }
 }
 </script>

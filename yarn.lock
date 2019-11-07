@@ -8443,10 +8443,10 @@ vue@^2.6.10:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
 
-vuerd-core@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/vuerd-core/-/vuerd-core-0.3.0.tgz#e338372df382effab425ef6601bdd76ebdaafd19"
-  integrity sha512-VwvfiRI+tO940BIWS3jZdgkBgrazSZCFmZe6A3led0XCcLCalhRJB4qhzTcgNHKa5ScSpjEmayJ4Yo1jZX4Kxw==
+vuerd-core@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/vuerd-core/-/vuerd-core-0.3.3.tgz#0852f658875ea5ee3abd9ae823f11f717e633755"
+  integrity sha512-ykAEpk/3KVKoDABBatvcM2xqxXuhKHNx0djeNN0T+VyyUic/WUvmlmGjTfCJhnumEIk+LOFWg9HZqcvwCJXrmg==
   dependencies:
     "@tweenjs/tween.js" "^18.1.2"
     core-js "^3.1.2"

@@ -1,8 +1,12 @@
 import TuiEditor from "./TuiEditor.vue";
 import { Command } from "vuerd-core";
+import { Option } from "@/types";
 
 export default {
-  install(command: Command) {
+  install(command: Command, option?: Option) {
+    if (option && typeof option.imageUpload === "function") {
+      TuiEditor.prototype.imageUpload = option.imageUpload;
+    }
     command.editorAdd({
       component: TuiEditor,
       scope: ["md"],
