@@ -1,4 +1,4 @@
-# vuerd-plugin-tui.editor
+# vuerd-plugin-tui.editor [![Build Status](https://travis-ci.com/vuerd/vuerd-plugin-tui.editor.svg?branch=master)](https://travis-ci.com/vuerd/vuerd-plugin-tui.editor)
 [vuerd-core](https://github.com/vuerd/vuerd-core) plugin [tui.editor](https://github.com/nhn/tui.editor)
 
 ## Document
