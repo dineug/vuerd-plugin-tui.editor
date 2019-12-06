@@ -14,7 +14,7 @@ export default {
         }
       }
     };
-    if (option && typeof option.imageUpload === "function") {
+    if (option) {
       if (typeof option.imageUpload === "function") {
         TuiEditor.prototype.imageUpload = option.imageUpload;
       }
