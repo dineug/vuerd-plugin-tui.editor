@@ -2,6 +2,8 @@ import { Command } from "vuerd-core";
 
 export interface Option {
   imageUpload?: (blob: Blob, callback: (url: string) => void) => void;
+  scope?: string[] | RegExp[];
+  exclude?: string[] | RegExp[];
 }
 
 export declare function install(command: Command, option?: Option): void;

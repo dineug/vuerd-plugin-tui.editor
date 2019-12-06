@@ -1,13 +1,10 @@
 import TuiEditor from "./TuiEditor.vue";
-import { Command } from "vuerd-core";
+import { Command, Editor } from "vuerd-core";
 import { Option } from "@/types";
 
 export default {
   install(command: Command, option?: Option) {
-    if (option && typeof option.imageUpload === "function") {
-      TuiEditor.prototype.imageUpload = option.imageUpload;
-    }
-    command.editorAdd({
+    const editor: Editor = {
       component: TuiEditor,
       scope: ["md"],
       option: {
@@ -16,6 +13,18 @@ export default {
           repo: "vuerd-plugin-tui.editor"
         }
       }
-    });
+    };
+    if (option && typeof option.imageUpload === "function") {
+      if (typeof option.imageUpload === "function") {
+        TuiEditor.prototype.imageUpload = option.imageUpload;
+      }
+      if (option.scope !== undefined) {
+        editor.scope = option.scope;
+      }
+      if (option.exclude !== undefined) {
+        editor.exclude = option.exclude;
+      }
+    }
+    command.editorAdd(editor);
   }
 };
