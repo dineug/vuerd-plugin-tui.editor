@@ -50,7 +50,5 @@ VuerdCore.use({
   }
 });
 
-VuerdCore.use(TuiEditor, {
-  scope: ["test"]
-});
+VuerdCore.use(TuiEditor);
 Vue.use(VuerdCore);
