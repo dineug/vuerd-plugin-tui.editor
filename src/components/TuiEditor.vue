@@ -43,7 +43,7 @@ export default class TuiEditor extends Vue {
     hooks: {}
   };
 
-  public imageUpload?: ((blob: Blob, callback: (url: string) => void) => void);
+  public imageUpload?: (blob: Blob, callback: (url: string) => void) => void;
 
   @Watch("focus")
   private watchFocus(focus: boolean) {
