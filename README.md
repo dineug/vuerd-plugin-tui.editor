@@ -2,7 +2,7 @@
 
 > [vuerd-core](https://github.com/vuerd/vuerd-core) plugin [tui.editor](https://github.com/nhn/tui.editor)
 
-[![npm version](https://img.shields.io/npm/v/vuerd-plugin-tui.editor.svg)](https://www.npmjs.com/package/vuerd-plugin-tui.editor) [![Build Status](https://travis-ci.com/vuerd/vuerd-plugin-tui.editor.svg?branch=master)](https://travis-ci.com/vuerd/vuerd-plugin-tui.editor) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/37d1a8e07ea948778802ff3cbd35f51e)](https://www.codacy.com/gh/vuerd/vuerd-plugin-tui.editor?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vuerd/vuerd-plugin-tui.editor&amp;utm_campaign=Badge_Grade)
+[![npm version](https://img.shields.io/npm/v/vuerd-plugin-tui.editor.svg)](https://www.npmjs.com/package/vuerd-plugin-tui.editor) [![Build Status](https://travis-ci.com/vuerd/vuerd-plugin-tui.editor.svg?branch=master)](https://travis-ci.com/vuerd/vuerd-plugin-tui.editor)
 
 ## Document
 [Storybook](https://vuerd.github.io/vuerd-docs/)   
