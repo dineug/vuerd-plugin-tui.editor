@@ -5,7 +5,7 @@ import { Option } from "@/types";
 export default {
   install(command: Command, option?: Option) {
     const editor: Editor = {
-      name: "TuiEditor",
+      name: "tui.editor",
       component: TuiEditor,
       scope: ["md"],
       option: {
