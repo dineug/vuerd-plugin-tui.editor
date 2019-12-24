@@ -28,6 +28,7 @@ interface EditorOption {
 }
 
 @Component({
+  name: "TuiEditor",
   components: {
     Editor
   }
