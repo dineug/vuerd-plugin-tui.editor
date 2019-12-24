@@ -1,6 +1,6 @@
 {
   "name": "vuerd-plugin-tui.editor",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "vuerd-core plugin tui.editor",
   "main": "dist/vuerd-plugin-tui.editor.common.js",
   "typings": "src/types/index.d.ts",
