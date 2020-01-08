@@ -23,10 +23,6 @@ import { Editor } from "@toast-ui/vue-editor";
 import { EditorOption, PreviewStyle } from "@/types";
 import { Component, Prop, Watch, Vue } from "vue-property-decorator";
 
-interface Option extends EditorOption {
-  hooks: any;
-}
-
 const optionKeys = [
   "exts",
   "minHeight",
@@ -50,7 +46,7 @@ export default class TuiEditor extends Vue {
   @Prop({ type: Boolean, default: false })
   private focus!: boolean;
 
-  private editorOption: Option = {
+  private editorOption: any = {
     hooks: {},
     exts: ["chart", "uml", "table", "scrollSync"],
     minHeight: "200px",
@@ -112,8 +108,7 @@ export default class TuiEditor extends Vue {
       optionKeys.forEach(key => {
         const option = this.option as any;
         if (option[key] !== undefined) {
-          const editorOption = this.editorOption as any;
-          editorOption[key] = option[key];
+          this.editorOption[key] = option[key];
         }
       });
     }
