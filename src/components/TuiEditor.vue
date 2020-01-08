@@ -3,7 +3,7 @@
     <Editor
       :value="value"
       height="100%"
-      previewStyle="vertical"
+      :previewStyle="previewStyle"
       :options="editorOption"
       ref="tuiEditor"
       @input="onInput"
@@ -20,12 +20,23 @@ import "tui-editor/dist/tui-editor-extUML";
 import "tui-editor/dist/tui-editor-extTable";
 import "tui-editor/dist/tui-editor-extScrollSync";
 import { Editor } from "@toast-ui/vue-editor";
+import { EditorOption, PreviewStyle } from "@/types";
 import { Component, Prop, Watch, Vue } from "vue-property-decorator";
 
-interface EditorOption {
-  exts: string[];
+interface Option extends EditorOption {
   hooks: any;
 }
+
+const optionKeys = [
+  "exts",
+  "minHeight",
+  "language",
+  "useCommandShortcut",
+  "useDefaultHTMLSanitizer",
+  "usageStatistics",
+  "hideModeSwitch",
+  "toolbarItems"
+];
 
 @Component({
   name: "TuiEditor",
@@ -39,12 +50,42 @@ export default class TuiEditor extends Vue {
   @Prop({ type: Boolean, default: false })
   private focus!: boolean;
 
-  private editorOption: EditorOption = {
+  private editorOption: Option = {
+    hooks: {},
     exts: ["chart", "uml", "table", "scrollSync"],
-    hooks: {}
+    minHeight: "200px",
+    language: "en_US",
+    useCommandShortcut: true,
+    useDefaultHTMLSanitizer: true,
+    usageStatistics: false,
+    hideModeSwitch: false,
+    toolbarItems: [
+      "heading",
+      "bold",
+      "italic",
+      "strike",
+      "divider",
+      "hr",
+      "quote",
+      "divider",
+      "ul",
+      "ol",
+      "task",
+      "indent",
+      "outdent",
+      "divider",
+      "table",
+      "image",
+      "link",
+      "divider",
+      "code",
+      "codeblock"
+    ]
   };
-
+  private previewStyle?: PreviewStyle | null = null;
+  public preview?: PreviewStyle;
   public imageUpload?: (blob: Blob, callback: (url: string) => void) => void;
+  public option?: EditorOption;
 
   @Watch("focus")
   private watchFocus(focus: boolean) {
@@ -63,6 +104,18 @@ export default class TuiEditor extends Vue {
   private created() {
     if (this.imageUpload && typeof this.imageUpload === "function") {
       this.editorOption.hooks.addImageBlobHook = this.imageUpload;
+    }
+    if (this.preview) {
+      this.previewStyle = this.preview;
+    }
+    if (this.option) {
+      optionKeys.forEach(key => {
+        const option = this.option as any;
+        if (option[key] !== undefined) {
+          const editorOption = this.editorOption as any;
+          editorOption[key] = option[key];
+        }
+      });
     }
   }
 }

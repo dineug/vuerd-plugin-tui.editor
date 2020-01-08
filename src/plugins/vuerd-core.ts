@@ -50,5 +50,9 @@ VuerdCore.use({
   }
 });
 
-VuerdCore.use(TuiEditor);
+VuerdCore.use(TuiEditor, {
+  editorOption: {
+    previewStyle: "vertical"
+  }
+});
 Vue.use(VuerdCore);

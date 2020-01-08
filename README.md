@@ -76,7 +76,41 @@ export interface Option {
   imageUpload?: (blob: Blob, callback: (url: string) => void) => void;
   scope?: string[] | RegExp[];
   exclude?: string[] | RegExp[];
+  editorOption?: EditorOption;
 }
+
+export interface EditorOption {
+  previewStyle?: PreviewStyle;
+  exts?: Exts[];
+  minHeight?: string;
+  language?: string;
+  useCommandShortcut?: boolean;
+  useDefaultHTMLSanitizer?: boolean;
+  usageStatistics?: boolean;
+  hideModeSwitch?: boolean;
+  toolbarItems?: ToolbarItems[];
+}
+
+export type PreviewStyle = "vertical";
+export type Exts = "chart" | "uml" | "table" | "scrollSync";
+export type ToolbarItems =
+  | "heading"
+  | "bold"
+  | "italic"
+  | "strike"
+  | "divider"
+  | "hr"
+  | "quote"
+  | "ul"
+  | "ol"
+  | "task"
+  | "indent"
+  | "outdent"
+  | "table"
+  | "image"
+  | "link"
+  | "code"
+  | "codeblock";
 ```
 ## Option
 | Name | Type | Default | Describe |
@@ -84,6 +118,43 @@ export interface Option {
 | imageUpload | function | base64 | image upload |
 | scope | [String \| RegExp] | ["md"] | file designation(string extension) |
 | exclude | [String \| RegExp] |  | exception file designation(string extension) |
+| editorOption | EditorOption | default option | tui.editor option |
+
+## default EditorOption
+```javascript
+editorOption = {
+    previewStyle: undefined,
+    exts: ["chart", "uml", "table", "scrollSync"],
+    minHeight: "200px",
+    language: "en_US",
+    useCommandShortcut: true,
+    useDefaultHTMLSanitizer: true,
+    usageStatistics: false,
+    hideModeSwitch: false,
+    toolbarItems: [
+      "heading",
+      "bold",
+      "italic",
+      "strike",
+      "divider",
+      "hr",
+      "quote",
+      "divider",
+      "ul",
+      "ol",
+      "task",
+      "indent",
+      "outdent",
+      "divider",
+      "table",
+      "image",
+      "link",
+      "divider",
+      "code",
+      "codeblock"
+    ]
+}
+```
 
 ## License
 [MIT](https://github.com/vuerd/vuerd-plugin-tui.editor/blob/master/LICENSE)
